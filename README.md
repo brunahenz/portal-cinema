@@ -407,7 +407,7 @@ O projeto será publicado utilizando **GitHub Pages**, permitindo acessar o Cine
 
 Link do projeto:
 
-**[Adicionar aqui o link do GitHub Pages após a publicação]**
+**https://brunahenz.github.io/portal-cinema/**
 
 ---
 
