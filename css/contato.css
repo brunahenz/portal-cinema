@@ -1,0 +1,125 @@
+/* PÁGINA DE CONTATO */
+
+.contato-area {
+    display: flex;
+    align-items: flex-start;
+    gap: 70px;
+}
+
+/* TEXTO */
+
+.contato-texto {
+    flex: 1;
+}
+
+.contato-texto h2 {
+    margin: 10px 0 20px;
+
+    font-size: 34px;
+}
+
+.contato-texto > p {
+    color: var(--texto-secundario);
+}
+
+.contato-info {
+    margin-top: 30px;
+}
+
+.contato-info p {
+    margin-bottom: 10px;
+
+    color: var(--texto-secundario);
+}
+
+/* FORMULÁRIO */
+
+.formulario {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formulario label {
+    margin-top: 8px;
+
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    background-color: var(--cartao);
+
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+
+    color: var(--texto);
+
+    outline: none;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border-color: var(--destaque);
+}
+
+.formulario textarea {
+    min-height: 150px;
+
+    resize: vertical;
+}
+
+.formulario button {
+    margin-top: 15px;
+
+    padding: 13px 24px;
+
+    background-color: var(--destaque);
+    color: #111117;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.formulario button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+
+    .contato-area {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contato-texto,
+    .formulario {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .contato-texto h2 {
+        font-size: 28px;
+    }
+
+    .formulario input,
+    .formulario textarea {
+        padding: 12px;
+    }
+}

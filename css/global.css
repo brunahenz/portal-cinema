@@ -1,0 +1,174 @@
+/* VARIÁVEIS */
+
+:root {
+    --fundo: #0f0f14;
+    --fundo-secundario: #181820;
+    --cartao: #20202a;
+    --texto: #f5f5f5;
+    --texto-secundario: #b8b8c2;
+    --destaque: #e8b84b;
+    --borda: #30303a;
+
+    --largura: 1200px;
+}
+
+/* CONFIGURAÇÕES GERAIS */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: var(--largura);
+    margin: 0 auto;
+}
+
+a {
+    color: inherit;
+}
+
+/* CABEÇALHO */
+
+header {
+    background-color: #111117;
+    border-bottom: 1px solid var(--borda);
+}
+
+.cabecalho {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--destaque);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--texto-secundario);
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--destaque);
+}
+
+/* CATEGORIA */
+
+.categoria {
+    color: var(--destaque);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* BOTÃO */
+
+.botao {
+    display: inline-block;
+    background-color: var(--destaque);
+    color: #111117;
+    padding: 13px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* TÍTULOS DE PÁGINA */
+
+.cabecalho-pagina {
+    background-color: var(--fundo-secundario);
+    padding: 70px 0;
+}
+
+.cabecalho-pagina h1 {
+    font-size: 44px;
+    margin: 10px 0;
+}
+
+.cabecalho-pagina p {
+    color: var(--texto-secundario);
+}
+
+/* SEÇÃO */
+
+.secao {
+    padding: 80px 0;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: #111117;
+    border-top: 1px solid var(--borda);
+}
+
+.rodape {
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.rodape p {
+    color: var(--texto-secundario);
+    font-size: 14px;
+}
+
+/* RESPONSIVIDADE GLOBAL */
+
+@media (max-width: 768px) {
+
+    .cabecalho {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .rodape {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 25px 0;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .cabecalho-pagina h1 {
+        font-size: 36px;
+    }
+}

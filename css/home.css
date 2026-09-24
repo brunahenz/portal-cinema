@@ -1,0 +1,178 @@
+/* PÁGINA INICIAL */
+
+/* DESTAQUE */
+
+.destaque {
+    min-height: 520px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15, 15, 20, 0.98),
+            rgba(15, 15, 20, 0.72),
+            rgba(15, 15, 20, 0.95)
+        ),
+        url("../img/destaque.jpg") center/cover;
+}
+
+.destaque-conteudo {
+    display: flex;
+    align-items: center;
+}
+
+.destaque h1 {
+    max-width: 650px;
+    margin: 15px 0;
+
+    font-size: 52px;
+    line-height: 1.1;
+}
+
+.destaque p {
+    max-width: 600px;
+    margin-bottom: 30px;
+
+    color: var(--texto-secundario);
+    font-size: 18px;
+}
+
+/* DESTAQUES */
+
+.titulo-secao {
+    margin-bottom: 35px;
+}
+
+.titulo-secao span {
+    color: var(--destaque);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.titulo-secao h2 {
+    font-size: 34px;
+    margin-top: 5px;
+}
+
+/* CARDS */
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.card {
+    flex: 1 1 250px;
+
+    background-color: var(--cartao);
+
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.imagem-card {
+    height: 230px;
+
+    background-size: cover;
+    background-position: center;
+}
+
+.imagem-filme1 {
+    background-image:
+        linear-gradient(135deg, #5b3b25, #d09a52);
+}
+
+.imagem-filme2 {
+    background-image:
+        linear-gradient(135deg, #1e4660, #6e9bb8);
+}
+
+.imagem-filme3 {
+    background-image:
+        linear-gradient(135deg, #422d4c, #9a688b);
+}
+
+.card-conteudo {
+    padding: 25px;
+}
+
+.card h3 {
+    margin: 8px 0;
+}
+
+.card p {
+    color: var(--texto-secundario);
+    margin-bottom: 18px;
+}
+
+.card a {
+    color: var(--destaque);
+    font-weight: bold;
+}
+
+/* SOBRE */
+
+.sobre {
+    background-color: var(--fundo-secundario);
+    padding: 70px 0;
+}
+
+.sobre-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre h2 {
+    font-size: 34px;
+    margin-top: 10px;
+}
+
+.sobre p {
+    max-width: 550px;
+    color: var(--texto-secundario);
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+
+    .destaque {
+        min-height: 450px;
+    }
+
+    .destaque h1 {
+        font-size: 38px;
+    }
+
+    .sobre-conteudo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .destaque h1 {
+        font-size: 32px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 28px;
+    }
+}
