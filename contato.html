@@ -27,63 +27,82 @@
         </div>
     </header>
 
-    <main>
+<main class="container-contato">
+  <!-- Cabeçalho da página -->
+  <header class="topo-contato">
+    <span class="subtitulo-destaque">FALE CONOSCO</span>
+    <h1>Entre em contato</h1>
+    <p>Envie uma mensagem para o CineMundo. Estamos prontos para ajudar!</p>
+  </header>
 
-        <section class="cabecalho-pagina">
-            <div class="container">
-                <span class="categoria">FALE CONOSCO</span>
-                <h1>Entre em contato</h1>
-                <p>
-                    Envie uma mensagem para o CineMundo.
-                </p>
-            </div>
-        </section>
+  <div class="grid-contato">
+    <!-- Lado Esquerdo: Informações -->
+    <section class="card-info">
+      <span class="subtitulo-destaque">CINEMUNDO</span>
+      <h2>Tem alguma sugestão?</h2>
+      <p class="descricao-info">
+        Você pode enviar sugestões de filmes, notícias ou conteúdos que gostaria de encontrar no portal.
+      </p>
 
-        <section class="secao">
-            <div class="container contato-area">
+      <div class="lista-detalhes">
+        <div class="item-detalhe">
+          <span class="icone-destaque">📧</span>
+          <div>
+            <strong>E-mail</strong>
+            <p>contato@cinemundo.com</p>
+          </div>
+        </div>
 
-                <div class="contato-texto">
-                    <span class="categoria">CINEMUNDO</span>
+        <div class="item-detalhe">
+          <span class="icone-destaque">⏰</span>
+          <div>
+            <strong>Horário de Atendimento</strong>
+            <p>Segunda a Sexta, das 09h às 18h</p>
+          </div>
+        </div>
 
-                    <h2>Tem alguma sugestão?</h2>
+        <div class="item-detalhe">
+          <span class="icone-destaque">📍</span>
+          <div>
+            <strong>Atendimento Presencial</strong>
+            <p>Av. das Estrelas, 500 — CineMundo Plaza</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                    <p>
-                        Você pode enviar sugestões de filmes, notícias ou
-                        conteúdos que gostaria de encontrar no portal.
-                    </p>
+    <!-- Lado Direito: Formulário -->
+    <section class="card-form">
+      <form class="form-contato">
+        <div class="grupo-input">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" placeholder="Digite seu nome" required>
+        </div>
 
-                    <div class="contato-info">
-                        <p><strong>E-mail:</strong> contato@cinemundo.com</p>
-                        <p><strong>Horário:</strong> Segunda a sexta</p>
-                    </div>
-                </div>
+        <div class="grupo-input">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="Digite seu e-mail" required>
+        </div>
 
-                <form class="formulario">
+        <div class="grupo-input">
+          <label for="assunto">Assunto</label>
+          <input type="text" id="assunto" placeholder="Digite o assunto" required>
+        </div>
 
-                    <label for="nome">Nome</label>
-                    <input type="text" id="nome" name="nome"
-                        placeholder="Digite seu nome">
-
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email"
-                        placeholder="Digite seu e-mail">
-
-                    <label for="assunto">Assunto</label>
-                    <input type="text" id="assunto" name="assunto"
-                        placeholder="Digite o assunto">
-
-                    <label for="mensagem">Mensagem</label>
-                    <textarea id="mensagem" name="mensagem"
-                        placeholder="Digite sua mensagem"></textarea>
-
-                    <button type="submit">Enviar mensagem</button>
-
-                </form>
-
-            </div>
-        </section>
-
-    </main>
+        <div class="grupo-input">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" rows="4" placeholder="Digite sua mensagem" required></textarea>
+        </div>
+      </form>
+      <button type="button" class="btn-enviar"
+                                    onclick="this.nextElementSibling.style.display='block'">Enviar Resposta</button>
+                            <div class="mensagem-sucesso"
+                                style="display: none; margin-top: 10px; color: #34d399; font-weight: 600;">
+                                🎉 Resposta enviada com sucesso!
+                            </div>
+    </section>
+  </div>
+</main>
 
     <footer>
         <div class="container rodape">

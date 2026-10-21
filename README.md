@@ -321,6 +321,32 @@ A página de contato possui um formulário com campos para:
 * mensagem.
 
 ---
+## Evolução do Projeto e Atualizações da Versão 1.1
+
+Durante o desenvolvimento e refinamento do portal, diversas melhorias visuais e funcionais foram implementadas para elevar o nível da interface mantendo o foco em **HTML e CSS puro**.
+
+### 1. Modernização do Design e Paleta de Cores
+- **Tema Dark Consistente:** Padronização da paleta de cores escuras em tons de cinza/chumbo com contraste em amarelo/dourado (`#f59e0b` / `#fbbf24`), criando uma atmosfera cinematográfica.
+- **Card Containers:** Adição de blocos com fundo contrastante (`#1f2937` / `#111827`) e bordas suaves para criar profundidade visual e hierarquia entre o conteúdo e o fundo das páginas.
+- **Microinterações CSS:** Implementação de efeitos de *hover* e transições suaves (`transition: transform, border-color`) nos botões, cards de filmes, cards de notícias e campos de formulário.
+
+### 2. Aprimoramento da Página de Filmes (`filmes.html`)
+- **Precificação dos Ingressos:** Adição dos valores dos bilhetes nos cards dos filmes para maior realismo do portal de cinema.
+- **Simulação de Pagamento Sem JavaScript:**
+  - Implementação de formulários de compra individuais para cada filme.
+  - Feedback imediato de *"Pagamento Aprovado"* diretamente na interface abaixo do formulário utilizando CSS puro / interações nativas sem recarregar a página de forma inconsistente.
+- **Padronização de Botões:** Criação das classes `.btn-comprar` e `.btn-voltar` com padding ajustado, tipografia destacada e animações de clique.
+
+### 3. Reformulação da Página de Notícias (`noticias.html`)
+- **Destaque Principal:** Criação de um card de notícia de grande impacto visual (`.card-noticia-principal`) com selos/tags de categoria (ex: *🏆 Oscar 2026*, *🔥 Bilheteria*).
+- **Grelha de Notícias (Grid Layout):** Organização das matérias secundárias em um layout flexível e responsivo, contendo resumos das matérias, datas de publicação e tags temáticas.
+
+### 4. Reestruturação da Página de Contato (`contato.html`)
+- **Layout em Duas Colunas:** Divisão equilibrada entre as informações de atendimento (esquerda) e o formulário de mensagem (direita).
+- **Detalhamento de Canais:** Inclusão de ícones visuais e informações completas sobre e-mail de suporte, horários de funcionamento e endereço presencial.
+- **Seção de Perguntas Frequentes (FAQ):** Implementação de sanfonas de dúvidas frequentes utilizando a tag semântica do HTML5 `<details>` e `<summary>`, totalmente interativa sem a necessidade de scripts.
+
+---
 
 # Versão 2 — Funcionalidades planejadas
 

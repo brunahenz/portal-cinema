@@ -1,126 +1,459 @@
-/* PÁGINA DE FILMES */
+/* ==========================================
+   ESTILOS DAS PÁGINAS DE FILMES (filmes.css)
+   ================================---------- */
 
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
+/* ------------------------------------------
+   1. CABEÇALHO INTERNO E NAVEGAÇÃO
+   ------------------------------------------ */
+.header-interno, .topo-site {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.card {
-    flex: 1 1 250px;
-
-    background-color: var(--cartao);
-
-    border: 1px solid var(--borda);
-    border-radius: 10px;
-
-    overflow: hidden;
-
-    transition: transform 0.3s, border-color 0.3s;
+.btn-voltar {
+  display: inline-block;
+  color: #f59e0b;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    border-color: var(--destaque);
+.btn-voltar:hover {
+  color: #fbbf24;
+  transform: translateX(-4px);
 }
 
-/* IMAGENS */
-
-.imagem-card {
-    height: 250px;
-
-    background-size: cover;
-    background-position: center;
+.menu-navegacao a {
+  color: #9ca3af;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 600;
+  transition: color 0.2s;
 }
 
-.imagem-filme1 {
-    background-image:
-        linear-gradient(135deg, #5b3b25, #d09a52);
+.menu-navegacao a:hover,
+.menu-navegacao a.ativo {
+  color: #f59e0b;
 }
 
-.imagem-filme2 {
-    background-image:
-        linear-gradient(135deg, #1e4660, #6e9bb8);
+
+/* ------------------------------------------
+   2. ABA GERAL DE FILMES (filmes.html)
+   ------------------------------------------ */
+.titulo-pagina {
+  max-width: 1200px;
+  margin: 30px auto 20px auto;
+  padding: 0 20px;
 }
 
-.imagem-filme3 {
-    background-image:
-        linear-gradient(135deg, #422d4c, #9a688b);
+.titulo-pagina h2 {
+  color: #f3f4f6;
+  font-size: 2rem;
 }
 
-.imagem-filme4 {
-    background-image:
-        linear-gradient(135deg, #294b3c, #76a56d);
+.titulo-pagina p {
+  color: #9ca3af;
+  margin-top: 6px;
 }
 
-/* CONTEÚDO */
-
-.card-conteudo {
-    padding: 25px;
+.lista-programacao {
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.card h2 {
-    margin: 8px 0 12px;
-
-    font-size: 24px;
+.card-programacao {
+  background-color: #1f2937;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
 }
 
-.card p {
-    color: var(--texto-secundario);
-    margin-bottom: 20px;
+.card-programacao:hover {
+  transform: translateY(-3px);
 }
 
-/* INFORMAÇÕES */
-
-.informacoes {
-    display: flex;
-    gap: 20px;
-
-    padding-top: 15px;
-
-    border-top: 1px solid var(--borda);
-
-    color: var(--texto-secundario);
-    font-size: 14px;
+.card-programacao img {
+  width: 130px;
+  height: 185px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
 }
 
-.imagem-card {
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
+.detalhes-programacao {
+  flex: 1;
 }
 
-.imagem-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s;
+.detalhes-programacao .genero {
+  color: #f59e0b;
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
-.card:hover .imagem-card img {
-    transform: scale(1.05);
+.detalhes-programacao h3 {
+  color: #f3f4f6;
+  font-size: 1.4rem;
+  margin: 6px 0;
 }
 
-/* RESPONSIVO */
+.detalhes-programacao p {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
 
+.horarios-disponiveis strong {
+  display: block;
+  color: #d1d5db;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.lista-botoes {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+
+/* ------------------------------------------
+   3. PÁGINAS INDIVIDUAIS DE DETALHES
+   ------------------------------------------ */
+.detalhes-filme-container {
+  max-width: 1200px;
+  margin: 20px auto 60px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 40px;
+}
+
+.capa-filme img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+  display: block;
+}
+
+.info-filme .genero {
+  color: #f59e0b;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.info-filme h1 {
+  font-size: 2.5rem;
+  color: #f3f4f6;
+  margin: 8px 0;
+}
+
+.info-filme .tagline {
+  font-style: italic;
+  color: #9ca3af;
+  margin-bottom: 24px;
+}
+
+.bloco-sinopse, .ficha-tecnica, .bloco-video {
+  margin-bottom: 30px;
+}
+
+.bloco-sinopse h3, .bloco-video h3 {
+  color: #f3f4f6;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  border-left: 4px solid #f59e0b;
+  padding-left: 10px;
+}
+
+.bloco-sinopse p {
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
+/* Ficha Técnica */
+.ficha-tecnica {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  background-color: #1f2937;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.item-tecnico strong {
+  display: block;
+  color: #9ca3af;
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+}
+
+.item-tecnico span {
+  color: #f3f4f6;
+  font-weight: 500;
+}
+
+/* Vídeo Responsivo (iFrame do YouTube) */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Proporção 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* ------------------------------------------
+   4. COMPONENTES DE BOTÕES E INGRESSOS
+   ------------------------------------------ */
+.btn-horario {
+  background-color: #111827;
+  color: #f3f4f6;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #374151;
+  transition: all 0.2s ease;
+}
+
+.btn-horario.ativo, .btn-horario:hover {
+  border-color: #f59e0b;
+  color: #f59e0b;
+  background-color: #1f2937;
+}
+
+.btn-comprar {
+  display: inline-block;
+  background-color: #f59e0b;
+  color: #111827;
+  padding:}
+
+  /* ==========================================
+   SISTEMA DE CADEIRAS E PAGAMENTO (SEM JS)
+   ================================---------- */
+
+.seccao-cadeiras {
+  margin-top: 25px;
+  background-color: #111827;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #374151;
+}
+
+.seccao-cadeiras h4 {
+  color: #f3f4f6;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.ecra-cinema {
+  background-color: #374151;
+  color: #9ca3af;
+  text-align: center;
+  padding: 6px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+/* Grelha de Cadeiras usando Checkboxes escondidos */
+.grelha-cadeiras {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  max-width: 320px;
+  margin: 0 auto 20px auto;
+}
+
+/* Esconde o checkbox real */
+.grelha-cadeiras input[type="checkbox"] {
+  display: none;
+}
+
+/* Estilo do botão da cadeira (o label funciona como o botão clicável) */
+.grelha-cadeiras label {
+  background-color: #374151;
+  color: #f3f4f6;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: background-color 0.2s, transform 0.1s;
+  display: block;
+}
+
+.grelha-cadeiras label:hover {
+  background-color: #4b5563;
+}
+
+/* Mágica do CSS: quando o checkbox for marcado, o label muda de cor automaticamente! */
+.grelha-cadeiras input[type="checkbox"]:checked + label {
+  background-color: #f59e0b;
+  color: #111827;
+}
+
+/* Legenda */
+.legenda-cadeiras {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-bottom: 20px;
+}
+
+.legenda-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cor-disponivel { width: 12px; height: 12px; background: #374151; border-radius: 3px; }
+.cor-selecionada { width: 12px; height: 12px; background: #f59e0b; border-radius: 3px; }
+
+/* Formulário de Pagamento */
+.form-pagamento {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+  border-top: 1px solid #374151;
+  padding-top: 15px;
+}
+
+.form-pagamento input {
+  width: 100%;
+  padding: 10px;
+  background-color: #1f2937;
+  border: 1px solid #374151;
+  color: #f3f4f6;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.card-programacao-completo {
+  background-color: #1f2937;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  margin-bottom: 24px;
+}
+
+/* Tamanho fixo e padronizado para todas as capas de filmes */
+.card-programacao-completo img {
+  width: 160px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  display: block;
+}
+
+/* Ajuste para telemóveis (imagens centralizadas e proporcionais) */
 @media (max-width: 768px) {
+  .card-programacao-completo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    .cards {
-        flex-direction: column;
-    }
-
-    .card {
-        width: 100%;
-    }
+  .card-programacao-completo img {
+    width: 140px;
+    height: 200px;
+  }
 }
 
-@media (max-width: 480px) {
+.header-interno {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-    .imagem-card {
-        height: 220px;
-    }
+.btn-voltar {
+  color: #f59e0b; /* Cor Laranja */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+  padding: 0px 100px;
+}
 
-    .card h2 {
-        font-size: 21px;
-    }
+.btn-voltar:hover {
+  color: #fbbf24; /* Laranja mais claro ao passar o rato */
+}
+
+/* Empurra o botão com a flecha para a extrema-direita */
+.btn-direita {
+  margin-left: auto;
+}
+.preco-ingresso {
+  color: #f59e0b;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 8px 0 12px 0;
+}
+
+.mensagem-sucesso {
+  display: none;
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #065f46;
+  color: #34d399;
+  border: 1px solid #10b981;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.btn-comprar {
+  background-color: #f59e0b;
+  color: #111827;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-comprar:hover {
+  background-color: #fbbf24;
+  transform: translateY(-1px);
 }
